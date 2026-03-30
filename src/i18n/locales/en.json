@@ -1,0 +1,206 @@
+{
+  "app": {
+    "name": "HR Metrika",
+    "tagline": "HR Analytics Platform"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "overview": "Overview",
+    "headcount": "Headcount",
+    "absence": "Absence Rate",
+    "salary": "Salary",
+    "hiring": "Hiring",
+    "turnover": "Turnover",
+    "financials": "Financials",
+    "admin": "Administration",
+    "employees": "Employees",
+    "departments": "Departments",
+    "absences": "Absences",
+    "recruitment": "Recruitment"
+  },
+  "auth": {
+    "login": "Sign In",
+    "email": "Email address",
+    "password": "Password",
+    "loginBtn": "Sign in to your account",
+    "loginSubtitle": "Enter your credentials to access the platform",
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Remember me",
+    "demoHint": "Demo credentials are pre-filled — click Sign In to continue"
+  },
+  "dashboard": {
+    "title": "Dashboard Overview",
+    "subtitle": "Key HR metrics at a glance",
+    "lastUpdated": "Last updated",
+    "viewAll": "View all",
+    "thisMonth": "This month",
+    "vsLastMonth": "vs last month",
+    "trend": "Trend"
+  },
+  "kpi": {
+    "headcount": "Total Headcount",
+    "absenceRate": "Absence Rate",
+    "avgSalary": "Average Salary",
+    "turnoverRate": "Turnover Rate",
+    "offerAcceptance": "Offer Acceptance",
+    "revenuePerEmployee": "Revenue / Employee",
+    "profitPerEmployee": "Profit / Employee",
+    "timeToHire": "Time to Hire",
+    "openPositions": "Open Positions",
+    "newHires": "New Hires",
+    "retentionRate": "Retention Rate",
+    "medianSalary": "Median Salary",
+    "totalPayroll": "Total Payroll"
+  },
+  "charts": {
+    "headcountTrend": "Headcount Trend",
+    "absenceTrend": "Absence Rate Trend",
+    "salaryByDept": "Salary by Department",
+    "turnoverTrend": "Turnover Rate Trend",
+    "hiringFunnel": "Hiring Funnel",
+    "employeeStatus": "Employee Status",
+    "revenueProfit": "Revenue & Profit",
+    "months": ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+  },
+  "table": {
+    "name": "Name",
+    "department": "Department",
+    "position": "Position",
+    "salary": "Salary",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "status": "Status",
+    "actions": "Actions",
+    "search": "Search...",
+    "noData": "No data available",
+    "loading": "Loading...",
+    "total": "Total",
+    "showing": "Showing {{from}}-{{to}} of {{total}}",
+    "headcount": "Headcount",
+    "avgSalary": "Avg Salary",
+    "type": "Type",
+    "days": "Days",
+    "opened": "Opened",
+    "candidates": "Candidates",
+    "interviews": "Interviews"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "onLeave": "On Leave",
+    "terminated": "Terminated",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "open": "Open",
+    "filled": "Filled",
+    "cancelled": "Cancelled"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "close": "Close",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "settings": "Settings",
+    "logout": "Sign out",
+    "profile": "Profile",
+    "employees": "employees",
+    "days": "days",
+    "perMonth": "per month",
+    "perEmployee": "/ employee",
+    "monthly": "monthly"
+  },
+  "user": {
+    "name": "Ferangiz Tolibova",
+    "role": "HR Analyst"
+  },
+  "admin": {
+    "employeesTitle": "Employees",
+    "employeesSubtitle": "Manage your workforce",
+    "departmentsTitle": "Departments",
+    "departmentsSubtitle": "Organize your company structure",
+    "absencesTitle": "Absence Records",
+    "absencesSubtitle": "Track employee absences",
+    "recruitmentTitle": "Recruitment",
+    "recruitmentSubtitle": "Manage open positions and hiring",
+    "financialsTitle": "Financial Data",
+    "financialsSubtitle": "Monthly revenue and profit entries",
+    "addEmployee": "Add Employee",
+    "addDepartment": "Add Department",
+    "addAbsence": "Log Absence",
+    "addPosition": "Add Position",
+    "addEntry": "Add Entry",
+    "totalDepartments": "Total Departments",
+    "totalEmployees": "Total Employees",
+    "avgDeptSize": "Avg Dept Size",
+    "avgSalary": "Avg Salary",
+    "totalRecords": "Total Records",
+    "pending": "Pending",
+    "approved": "Approved",
+    "totalDays": "Total Days",
+    "openPositions": "Open Positions",
+    "filledPositions": "Filled This Period",
+    "totalCandidates": "Total Candidates",
+    "totalInterviews": "Total Interviews"
+  },
+  "pages": {
+    "headcount": {
+      "title": "Headcount Analytics",
+      "subtitle": "Track workforce size and growth over time"
+    },
+    "absence": {
+      "title": "Absence Rate",
+      "subtitle": "Monitor employee absence patterns and trends"
+    },
+    "salary": {
+      "title": "Salary Analytics",
+      "subtitle": "Analyze compensation across departments and roles"
+    },
+    "hiring": {
+      "title": "Hiring Metrics",
+      "subtitle": "Track recruitment efficiency and pipeline health"
+    },
+    "turnover": {
+      "title": "Turnover & Retention",
+      "subtitle": "Understand employee retention and churn patterns"
+    },
+    "financials": {
+      "title": "Financial Performance",
+      "subtitle": "Revenue and profit metrics per employee"
+    }
+  },
+  "footer": {
+    "dissertation": "Developed by Ferangiz Tolibova for Master's Dissertation",
+    "rights": "All rights reserved",
+    "madeWith": "Built with"
+  },
+  "login": {
+    "hero": {
+      "titleLine1": "Data-driven HR",
+      "titleLine2": "decisions made simple",
+      "description": "Track headcount, analyze trends, and make better workforce decisions with real-time analytics."
+    },
+    "stats": {
+      "employees": "Employees",
+      "metrics": "HR Metrics",
+      "languages": "Languages"
+    },
+    "error": {
+      "invalidCredentials": "Invalid credentials. Please try again."
+    }
+  },
+  "language": {
+    "en": "English",
+    "ru": "Русский",
+    "uz": "O'zbekcha"
+  }
+}

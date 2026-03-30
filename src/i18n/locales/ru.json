@@ -1,0 +1,206 @@
+{
+  "app": {
+    "name": "HR Metrika",
+    "tagline": "Платформа HR-аналитики"
+  },
+  "nav": {
+    "dashboard": "Панель управления",
+    "overview": "Обзор",
+    "headcount": "Численность",
+    "absence": "Процент отсутствий",
+    "salary": "Зарплата",
+    "hiring": "Найм",
+    "turnover": "Текучесть",
+    "financials": "Финансы",
+    "admin": "Администрирование",
+    "employees": "Сотрудники",
+    "departments": "Отделы",
+    "absences": "Отсутствия",
+    "recruitment": "Рекрутинг"
+  },
+  "auth": {
+    "login": "Войти",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "loginBtn": "Войти в аккаунт",
+    "loginSubtitle": "Введите свои данные для доступа к платформе",
+    "forgotPassword": "Забыли пароль?",
+    "rememberMe": "Запомнить меня",
+    "demoHint": "Данные для демо уже заполнены — нажмите «Войти» для продолжения"
+  },
+  "dashboard": {
+    "title": "Обзор панели",
+    "subtitle": "Ключевые HR-метрики с первого взгляда",
+    "lastUpdated": "Обновлено",
+    "viewAll": "Смотреть все",
+    "thisMonth": "Этот месяц",
+    "vsLastMonth": "к прошлому месяцу",
+    "trend": "Тренд"
+  },
+  "kpi": {
+    "headcount": "Численность персонала",
+    "absenceRate": "Процент отсутствий",
+    "avgSalary": "Средняя зарплата",
+    "turnoverRate": "Текучесть кадров",
+    "offerAcceptance": "Принятие предложений",
+    "revenuePerEmployee": "Выручка / сотрудник",
+    "profitPerEmployee": "Прибыль / сотрудник",
+    "timeToHire": "Время найма",
+    "openPositions": "Открытые вакансии",
+    "newHires": "Новые сотрудники",
+    "retentionRate": "Удержание персонала",
+    "medianSalary": "Медианная зарплата",
+    "totalPayroll": "Общий фонд оплаты труда"
+  },
+  "charts": {
+    "headcountTrend": "Динамика численности",
+    "absenceTrend": "Динамика отсутствий",
+    "salaryByDept": "Зарплата по отделам",
+    "turnoverTrend": "Динамика текучести",
+    "hiringFunnel": "Воронка найма",
+    "employeeStatus": "Статус сотрудников",
+    "revenueProfit": "Выручка и прибыль",
+    "months": ["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"]
+  },
+  "table": {
+    "name": "Имя",
+    "department": "Отдел",
+    "position": "Должность",
+    "salary": "Зарплата",
+    "startDate": "Дата начала",
+    "endDate": "Дата окончания",
+    "status": "Статус",
+    "actions": "Действия",
+    "search": "Поиск...",
+    "noData": "Нет данных",
+    "loading": "Загрузка...",
+    "total": "Итого",
+    "showing": "Показано {{from}}-{{to}} из {{total}}",
+    "headcount": "Численность",
+    "avgSalary": "Средняя зарплата",
+    "type": "Тип",
+    "days": "Дни",
+    "opened": "Дата открытия",
+    "candidates": "Кандидаты",
+    "interviews": "Интервью"
+  },
+  "status": {
+    "active": "Активный",
+    "inactive": "Неактивный",
+    "onLeave": "В отпуске",
+    "terminated": "Уволен",
+    "pending": "Ожидает",
+    "approved": "Одобрен",
+    "rejected": "Отклонён",
+    "open": "Открыта",
+    "filled": "Заполнена",
+    "cancelled": "Отменена"
+  },
+  "common": {
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "add": "Добавить",
+    "close": "Закрыть",
+    "confirm": "Подтвердить",
+    "back": "Назад",
+    "next": "Далее",
+    "filter": "Фильтр",
+    "export": "Экспорт",
+    "import": "Импорт",
+    "refresh": "Обновить",
+    "settings": "Настройки",
+    "logout": "Выйти",
+    "profile": "Профиль",
+    "employees": "сотрудников",
+    "days": "дней",
+    "perMonth": "в месяц",
+    "perEmployee": "/ сотрудник",
+    "monthly": "в месяц"
+  },
+  "user": {
+    "name": "Феранги Толибова",
+    "role": "HR Аналитик"
+  },
+  "admin": {
+    "employeesTitle": "Сотрудники",
+    "employeesSubtitle": "Управление персоналом",
+    "departmentsTitle": "Отделы",
+    "departmentsSubtitle": "Организация структуры компании",
+    "absencesTitle": "Учёт отсутствий",
+    "absencesSubtitle": "Отслеживание отсутствий сотрудников",
+    "recruitmentTitle": "Рекрутинг",
+    "recruitmentSubtitle": "Управление вакансиями и подбором",
+    "financialsTitle": "Финансовые данные",
+    "financialsSubtitle": "Ежемесячные данные о выручке и прибыли",
+    "addEmployee": "Добавить сотрудника",
+    "addDepartment": "Добавить отдел",
+    "addAbsence": "Добавить отсутствие",
+    "addPosition": "Добавить вакансию",
+    "addEntry": "Добавить запись",
+    "totalDepartments": "Всего отделов",
+    "totalEmployees": "Всего сотрудников",
+    "avgDeptSize": "Ср. размер отдела",
+    "avgSalary": "Средняя зарплата",
+    "totalRecords": "Всего записей",
+    "pending": "Ожидает",
+    "approved": "Одобрено",
+    "totalDays": "Всего дней",
+    "openPositions": "Открытые вакансии",
+    "filledPositions": "Закрытых вакансий",
+    "totalCandidates": "Всего кандидатов",
+    "totalInterviews": "Всего интервью"
+  },
+  "pages": {
+    "headcount": {
+      "title": "Аналитика численности",
+      "subtitle": "Отслеживайте размер и рост персонала"
+    },
+    "absence": {
+      "title": "Процент отсутствий",
+      "subtitle": "Мониторинг паттернов отсутствий"
+    },
+    "salary": {
+      "title": "Аналитика зарплат",
+      "subtitle": "Анализ вознаграждений по отделам и должностям"
+    },
+    "hiring": {
+      "title": "Метрики найма",
+      "subtitle": "Эффективность подбора и состояние воронки"
+    },
+    "turnover": {
+      "title": "Текучесть и удержание",
+      "subtitle": "Анализ удержания и оттока персонала"
+    },
+    "financials": {
+      "title": "Финансовые показатели",
+      "subtitle": "Выручка и прибыль на сотрудника"
+    }
+  },
+  "footer": {
+    "dissertation": "Разработано Феранги Толибовой для магистерской диссертации",
+    "rights": "Все права защищены",
+    "madeWith": "Создано с"
+  },
+  "login": {
+    "hero": {
+      "titleLine1": "HR на основе данных —",
+      "titleLine2": "решения стали проще",
+      "description": "Отслеживайте численность, анализируйте тенденции и принимайте взвешенные кадровые решения с помощью аналитики в реальном времени."
+    },
+    "stats": {
+      "employees": "Сотрудников",
+      "metrics": "HR-метрик",
+      "languages": "Языков"
+    },
+    "error": {
+      "invalidCredentials": "Неверные данные. Попробуйте ещё раз."
+    }
+  },
+  "language": {
+    "en": "English",
+    "ru": "Русский",
+    "uz": "O'zbekcha"
+  }
+}

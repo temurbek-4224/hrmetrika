@@ -1,0 +1,206 @@
+{
+  "app": {
+    "name": "HR Metrika",
+    "tagline": "HR Tahlil Platformasi"
+  },
+  "nav": {
+    "dashboard": "Boshqaruv paneli",
+    "overview": "Umumiy ko'rinish",
+    "headcount": "Xodimlar soni",
+    "absence": "Yo'qlik darajasi",
+    "salary": "Ish haqi",
+    "hiring": "Yollash",
+    "turnover": "Kadrlar almashinuvi",
+    "financials": "Moliya",
+    "admin": "Boshqaruv",
+    "employees": "Xodimlar",
+    "departments": "Bo'limlar",
+    "absences": "Yo'qliklar",
+    "recruitment": "Rekrutment"
+  },
+  "auth": {
+    "login": "Kirish",
+    "email": "Elektron pochta",
+    "password": "Parol",
+    "loginBtn": "Hisobga kirish",
+    "loginSubtitle": "Platformaga kirish uchun ma'lumotlaringizni kiriting",
+    "forgotPassword": "Parolni unutdingizmi?",
+    "rememberMe": "Eslab qolish",
+    "demoHint": "Demo ma'lumotlari to'ldirilgan — davom etish uchun Kirish tugmasini bosing"
+  },
+  "dashboard": {
+    "title": "Boshqaruv paneli",
+    "subtitle": "Asosiy HR ko'rsatkichlari bir qarashda",
+    "lastUpdated": "Yangilangan",
+    "viewAll": "Barchasini ko'rish",
+    "thisMonth": "Bu oy",
+    "vsLastMonth": "o'tgan oyga nisbatan",
+    "trend": "Tendentsiya"
+  },
+  "kpi": {
+    "headcount": "Jami xodimlar",
+    "absenceRate": "Yo'qlik darajasi",
+    "avgSalary": "O'rtacha ish haqi",
+    "turnoverRate": "Kadrlar almashinuvi",
+    "offerAcceptance": "Taklifni qabul qilish",
+    "revenuePerEmployee": "Daromad / xodim",
+    "profitPerEmployee": "Foyda / xodim",
+    "timeToHire": "Yollash vaqti",
+    "openPositions": "Ochiq lavozimlar",
+    "newHires": "Yangi xodimlar",
+    "retentionRate": "Ushlab qolish darajasi",
+    "medianSalary": "Median maosh",
+    "totalPayroll": "Umumiy ish haqi fondi"
+  },
+  "charts": {
+    "headcountTrend": "Xodimlar soni tendentsiyasi",
+    "absenceTrend": "Yo'qlik tendentsiyasi",
+    "salaryByDept": "Bo'lim bo'yicha ish haqi",
+    "turnoverTrend": "Almashinuv tendentsiyasi",
+    "hiringFunnel": "Yollash hunisi",
+    "employeeStatus": "Xodimlar holati",
+    "revenueProfit": "Daromad va foyda",
+    "months": ["Yan","Fev","Mar","Apr","May","Iyn","Iyl","Avg","Sen","Okt","Noy","Dek"]
+  },
+  "table": {
+    "name": "Ism",
+    "department": "Bo'lim",
+    "position": "Lavozim",
+    "salary": "Ish haqi",
+    "startDate": "Boshlash sanasi",
+    "endDate": "Tugash sanasi",
+    "status": "Holat",
+    "actions": "Harakatlar",
+    "search": "Qidirish...",
+    "noData": "Ma'lumot yo'q",
+    "loading": "Yuklanmoqda...",
+    "total": "Jami",
+    "showing": "{{from}}-{{to}} dan {{total}} tasi ko'rsatilmoqda",
+    "headcount": "Xodimlar soni",
+    "avgSalary": "O'rtacha ish haqi",
+    "type": "Tur",
+    "days": "Kunlar",
+    "opened": "Ochilgan sana",
+    "candidates": "Nomzodlar",
+    "interviews": "Suhbatlar"
+  },
+  "status": {
+    "active": "Faol",
+    "inactive": "Nofaol",
+    "onLeave": "Ta'tilda",
+    "terminated": "Ishdan bo'shatilgan",
+    "pending": "Kutilmoqda",
+    "approved": "Tasdiqlangan",
+    "rejected": "Rad etilgan",
+    "open": "Ochiq",
+    "filled": "To'ldirilgan",
+    "cancelled": "Bekor qilingan"
+  },
+  "common": {
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "edit": "Tahrirlash",
+    "delete": "O'chirish",
+    "add": "Qo'shish",
+    "close": "Yopish",
+    "confirm": "Tasdiqlash",
+    "back": "Orqaga",
+    "next": "Keyingi",
+    "filter": "Filtr",
+    "export": "Eksport",
+    "import": "Import",
+    "refresh": "Yangilash",
+    "settings": "Sozlamalar",
+    "logout": "Chiqish",
+    "profile": "Profil",
+    "employees": "xodim",
+    "days": "kun",
+    "perMonth": "oyiga",
+    "perEmployee": "/ xodim",
+    "monthly": "oylik"
+  },
+  "user": {
+    "name": "Ferangiz Tolibova",
+    "role": "HR Tahlilchi"
+  },
+  "admin": {
+    "employeesTitle": "Xodimlar",
+    "employeesSubtitle": "Ishchi kuchini boshqarish",
+    "departmentsTitle": "Bo'limlar",
+    "departmentsSubtitle": "Kompaniya tuzilmasini tartibga solish",
+    "absencesTitle": "Yo'qlik yozuvlari",
+    "absencesSubtitle": "Xodimlar yo'qligini kuzatish",
+    "recruitmentTitle": "Rekrutment",
+    "recruitmentSubtitle": "Ochiq lavozimlar va yollashni boshqarish",
+    "financialsTitle": "Moliyaviy ma'lumotlar",
+    "financialsSubtitle": "Oylik daromad va foyda ma'lumotlari",
+    "addEmployee": "Xodim qo'shish",
+    "addDepartment": "Bo'lim qo'shish",
+    "addAbsence": "Yo'qlik qo'shish",
+    "addPosition": "Lavozim qo'shish",
+    "addEntry": "Yozuv qo'shish",
+    "totalDepartments": "Jami bo'limlar",
+    "totalEmployees": "Jami xodimlar",
+    "avgDeptSize": "O'rtacha bo'lim hajmi",
+    "avgSalary": "O'rtacha ish haqi",
+    "totalRecords": "Jami yozuvlar",
+    "pending": "Kutilmoqda",
+    "approved": "Tasdiqlangan",
+    "totalDays": "Jami kunlar",
+    "openPositions": "Ochiq lavozimlar",
+    "filledPositions": "To'ldirilgan lavozimlar",
+    "totalCandidates": "Jami nomzodlar",
+    "totalInterviews": "Jami suhbatlar"
+  },
+  "pages": {
+    "headcount": {
+      "title": "Xodimlar soni tahlili",
+      "subtitle": "Ishchi kuchi hajmi va o'sishini kuzatish"
+    },
+    "absence": {
+      "title": "Yo'qlik darajasi",
+      "subtitle": "Xodimlar yo'qlik naqshlarini kuzatish"
+    },
+    "salary": {
+      "title": "Ish haqi tahlili",
+      "subtitle": "Bo'lim va lavozimlar bo'yicha maoshlarni tahlil qilish"
+    },
+    "hiring": {
+      "title": "Yollash ko'rsatkichlari",
+      "subtitle": "Rekrutment samaradorligi va quvur holatini kuzatish"
+    },
+    "turnover": {
+      "title": "Almashinuv va ushlab turish",
+      "subtitle": "Xodimlarni ushlab turish va chiqib ketish naqshlarini tushunish"
+    },
+    "financials": {
+      "title": "Moliyaviy ko'rsatkichlar",
+      "subtitle": "Xodim boshiga daromad va foyda ko'rsatkichlari"
+    }
+  },
+  "footer": {
+    "dissertation": "Ferangiz Tolibova tomonidan magistrlik dissertatsiyasi uchun ishlab chiqildi",
+    "rights": "Barcha huquqlar himoyalangan",
+    "madeWith": "Yaratilgan"
+  },
+  "login": {
+    "hero": {
+      "titleLine1": "Ma'lumotlarga asoslangan HR —",
+      "titleLine2": "qarorlar engilroq",
+      "description": "Xodimlar sonini kuzating, tendentsiyalarni tahlil qiling va real vaqtli tahlil yordamida yaxshiroq ishchi kuchi qarorlarini qabul qiling."
+    },
+    "stats": {
+      "employees": "Xodimlar",
+      "metrics": "HR ko'rsatkichlari",
+      "languages": "Tillar"
+    },
+    "error": {
+      "invalidCredentials": "Noto'g'ri ma'lumotlar. Qayta urinib ko'ring."
+    }
+  },
+  "language": {
+    "en": "English",
+    "ru": "Русский",
+    "uz": "O'zbekcha"
+  }
+}

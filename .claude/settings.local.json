@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm run:*)",
+      "Bash(npx vite:*)",
+      "Bash(node --check src/server.js)",
+      "Bash(node --check src/app.js)",
+      "Bash(node -e \"require\\(''''./src/lib/prisma''''\\)\")",
+      "Bash(npx prisma:*)",
+      "Bash(node --check src/lib/prisma.js)",
+      "Bash(node --check src/middleware/auth.js)",
+      "Bash(node --check src/middleware/errorHandler.js)",
+      "Bash(node --check src/services/auth.service.js)",
+      "Bash(node --check src/services/employees.service.js)",
+      "Bash(node -e \"const {faker}=require\\(''@faker-js/faker''\\); console.log\\(faker.version, faker.person.firstName\\(\\), faker.date.between\\({from:''2024-01-01'',to:''2024-12-31''}\\)\\)\")",
+      "Bash(node --check prisma/seed.js)",
+      "Bash(node -e \":*)",
+      "Bash(node prisma/verify.js)",
+      "Bash(del \"C:\\\\Users\\\\SURFACE\\\\Desktop\\\\HR METRIKA\\\\backend\\\\prisma\\\\verify.js\")",
+      "Bash(grep -rn \"from ''@/mock/employees''\" \"C:/Users/SURFACE/Desktop/HR METRIKA/src/pages/admin/\")",
+      "Bash(grep -rn \"from ''@/mock/user''\" \"C:/Users/SURFACE/Desktop/HR METRIKA/src/pages/auth/\")",
+      "Bash(grep -n \"from ''@/mock\" \"C:/Users/SURFACE/Desktop/HR METRIKA/src/pages/admin/Departments.jsx\")",
+      "Bash(grep -n \"from ''@/mock\" \"C:/Users/SURFACE/Desktop/HR METRIKA/src/pages/admin/Financials.jsx\")",
+      "Bash(node --check src/services/metrics.service.js)",
+      "Bash(node --check src/controllers/metrics.controller.js)",
+      "Bash(node --check src/routes/metrics.routes.js)",
+      "Bash(node prisma/smoke_test.js)",
+      "Bash(grep -rn \"from ''@/mock\" \"C:/Users/SURFACE/Desktop/HR METRIKA/src/pages/dashboard/\")",
+      "Bash(grep -rn \"from ''@/mock/employees''\" \"C:/Users/SURFACE/Desktop/HR METRIKA/src/pages/dashboard/\")",
+      "Bash(done)",
+      "Bash(grep -l \"useRole\" src/pages/admin/*.jsx)",
+      "Bash(node prisma/update-users.js)",
+      "Bash(node -e \"require\\(''xlsx''\\); require\\(''jspdf''\\); console.log\\(''packages ok''\\)\")"
+    ]
+  }
+}

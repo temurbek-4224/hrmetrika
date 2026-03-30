@@ -1,0 +1,147 @@
+// HR Metrika — Prisma Schema
+// Database: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ─────────────────────────────────────────────────────────────────────
+
+enum UserRole {
+  ADMIN
+  ANALYST
+}
+
+enum EmployeeStatus {
+  ACTIVE
+  ON_LEAVE
+  TERMINATED
+}
+
+enum EmploymentType {
+  FULL_TIME
+  PART_TIME
+  CONTRACTOR
+}
+
+enum AbsenceType {
+  SICK
+  VACATION
+  PERSONAL
+  MATERNITY
+  PATERNITY
+  UNPAID
+  OTHER
+}
+
+enum RecruitmentStatus {
+  OPEN
+  FILLED
+  CANCELLED
+}
+
+// ─── Models ────────────────────────────────────────────────────────────────────
+
+/// Platform users (Admin and HR Analyst roles)
+model User {
+  id            Int       @id @default(autoincrement())
+  name          String
+  email         String    @unique
+  password_hash String
+  role          UserRole  @default(ANALYST)
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+
+  @@map("users")
+}
+
+/// Company departments
+model Department {
+  id         Int        @id @default(autoincrement())
+  name       String     @unique
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+
+  employees          Employee[]
+  recruitment_records RecruitmentRecord[]
+
+  @@map("departments")
+}
+
+/// Employee master records
+model Employee {
+  id               Int            @id @default(autoincrement())
+  first_name       String
+  last_name        String
+  email            String         @unique
+  department_id    Int
+  job_title        String
+  employment_type  EmploymentType @default(FULL_TIME)
+  status           EmployeeStatus @default(ACTIVE)
+  salary           Decimal        @db.Decimal(12, 2)
+  hire_date        DateTime       @db.Date
+  termination_date DateTime?      @db.Date
+  created_at       DateTime       @default(now())
+  updated_at       DateTime       @updatedAt
+
+  department Department @relation(fields: [department_id], references: [id])
+  absences   Absence[]
+
+  @@map("employees")
+}
+
+/// Employee absence / leave records
+model Absence {
+  id          Int         @id @default(autoincrement())
+  employee_id Int
+  type        AbsenceType
+  start_date  DateTime    @db.Date
+  end_date    DateTime    @db.Date
+  days        Int
+  approved    Boolean     @default(false)
+  created_at  DateTime    @default(now())
+  updated_at  DateTime    @updatedAt
+
+  employee Employee @relation(fields: [employee_id], references: [id])
+
+  @@map("absences")
+}
+
+/// Recruitment / open position records
+model RecruitmentRecord {
+  id                Int               @id @default(autoincrement())
+  department_id     Int
+  job_title         String
+  opened_date       DateTime          @db.Date
+  offer_date        DateTime?         @db.Date
+  offer_accepted    Boolean?
+  hire_date         DateTime?         @db.Date
+  status            RecruitmentStatus @default(OPEN)
+  candidates_count  Int               @default(0)
+  interviews_count  Int               @default(0)
+  created_at        DateTime          @default(now())
+  updated_at        DateTime          @updatedAt
+
+  department Department @relation(fields: [department_id], references: [id])
+
+  @@map("recruitment_records")
+}
+
+/// Monthly financial entries (revenue + profit per period)
+model Financial {
+  id         Int      @id @default(autoincrement())
+  /// First day of the month this record represents (e.g. 2024-01-01 = January 2024)
+  period     DateTime @db.Date @unique
+  revenue    Decimal  @db.Decimal(15, 2)
+  net_profit Decimal  @db.Decimal(15, 2)
+  headcount  Int      /// Snapshot headcount for the period (used for per-employee calculations)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("financials")
+}
