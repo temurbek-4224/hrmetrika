@@ -7,7 +7,13 @@
  * - Parses JSON responses consistently
  */
 
-const BASE_URL = '/api'
+// In production (Vercel) VITE_API_URL must be set to the Render backend origin,
+// e.g. https://hrmetrika.onrender.com
+// In local dev it is left unset and Vite's proxy forwards /api/* to localhost:5000.
+const BASE_URL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : '/api'
+
 const TOKEN_KEY = 'hr_metrika_token'
 
 // ─── Token helpers ─────────────────────────────────────────────────────────────
