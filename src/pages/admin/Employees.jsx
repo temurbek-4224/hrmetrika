@@ -15,7 +15,7 @@ import {
   getEmployees, createEmployee, updateEmployee, deleteEmployee,
 } from '@/api/employees.api'
 import { getDepartments } from '@/api/departments.api'
-import { formatCurrency } from '@/utils/formatters'
+import { formatSoum } from '@/utils/formatters'
 
 // ─── Styling constants ───────────────────────────────────────────────────────
 const inputCls = 'w-full px-3 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-400 transition-colors'
@@ -307,7 +307,7 @@ export default function Employees() {
     {
       key: 'salary',
       label: t('table.salary'),
-      render: (val) => <span className="font-semibold text-slate-700">{formatCurrency(val)}</span>,
+      render: (val) => <span className="font-semibold text-slate-700">{formatSoum(val)}</span>,
     },
     {
       key: 'startDate',

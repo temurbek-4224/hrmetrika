@@ -51,7 +51,7 @@ function buildKpiData(ov) {
     },
     {
       id: 'avgSalary', key: 'kpi.avgSalary', value: ov.avgSalary.value,
-      trend: 0, format: 'currency', icon: 'DollarSign', color: 'emerald', inverse: false,
+      trend: 0, format: 'soum', icon: 'Banknote', color: 'emerald', inverse: false,
     },
     {
       id: 'turnoverRate', key: 'kpi.turnoverRate', value: ov.turnoverRate.value,

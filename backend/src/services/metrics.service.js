@@ -388,13 +388,13 @@ async function getSalary() {
     }
   }).sort((a, b) => b.avg - a.avg)
 
-  // ── Salary bands ─────────────────────────────────────────────────────────────
+  // ── Salary bands (UZS scale: 8 mln – 13 mln) ────────────────────────────────
   const bands = [
-    { label: '< $3k',         min: 0,     max: 3000  },
-    { label: '$3k – $5k',     min: 3000,  max: 5000  },
-    { label: '$5k – $7k',     min: 5000,  max: 7000  },
-    { label: '$7k – $10k',    min: 7000,  max: 10000 },
-    { label: '> $10k',        min: 10000, max: Infinity },
+    { label: '< 9 mln',      min: 0,           max: 9_000_000  },
+    { label: '9 – 10 mln',   min: 9_000_000,   max: 10_000_000 },
+    { label: '10 – 11 mln',  min: 10_000_000,  max: 11_000_000 },
+    { label: '11 – 12 mln',  min: 11_000_000,  max: 12_000_000 },
+    { label: '> 12 mln',     min: 12_000_000,  max: Infinity   },
   ]
   const salaryBands = bands.map(b => ({
     label: b.label,

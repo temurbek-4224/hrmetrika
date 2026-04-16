@@ -3,7 +3,7 @@ import { TrendingUp, TrendingDown, Minus } from 'lucide-react'
 import * as Icons from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/utils/cn'
-import { formatCurrency, formatPercent, formatNumber, formatCompact } from '@/utils/formatters'
+import { formatPercent, formatNumber, formatCompact, formatSoumCompact } from '@/utils/formatters'
 
 const colorMap = {
   indigo: { bg: 'bg-indigo-50', text: 'text-indigo-600', icon: 'bg-indigo-100', ring: 'ring-indigo-100' },
@@ -16,9 +16,10 @@ const colorMap = {
 
 function formatValue(value, format) {
   switch (format) {
+    case 'soum':     return formatSoumCompact(value)
     case 'currency': return formatCompact(value)
-    case 'percent': return formatPercent(value)
-    default: return formatNumber(value)
+    case 'percent':  return formatPercent(value)
+    default:         return formatNumber(value)
   }
 }
 
@@ -54,6 +55,7 @@ export default function KpiCard({ kpi, index = 0 }) {
       <div>
         <p className="text-2xl font-bold text-slate-900 tracking-tight">
           {kpi.format === 'currency' && '$'}{formatValue(kpi.value, kpi.format)}
+          {/* 'soum' format already includes "so'm" suffix via formatSoumCompact */}
         </p>
         <p className="text-sm text-slate-500 mt-0.5 font-medium">{t(kpi.key)}</p>
       </div>

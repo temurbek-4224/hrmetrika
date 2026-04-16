@@ -16,7 +16,7 @@ import {
   updateDepartment,
   deleteDepartment,
 } from '@/api/departments.api'
-import { formatCurrency } from '@/utils/formatters'
+import { formatSoum } from '@/utils/formatters'
 
 // ─── Stable module-level fetcher ──────────────────────────────────────────────
 const fetchDepartments = () => getDepartments()
@@ -238,7 +238,7 @@ export default function Departments() {
       label: t('table.avgSalary') || 'Avg Salary',
       render: (val) => (
         <span className="font-semibold text-slate-700">
-          {val > 0 ? formatCurrency(val) : '—'}
+          {val > 0 ? formatSoum(val) : '—'}
         </span>
       ),
     },
@@ -336,7 +336,7 @@ export default function Departments() {
           { label: t('admin.totalDepartments') || 'Total Departments', value: loading ? '—' : (departments?.length ?? 0), color: '#6366f1' },
           { label: t('admin.totalEmployees')   || 'Total Employees',   value: loading ? '—' : totalHeadcount,             color: '#10b981' },
           { label: t('admin.avgDeptSize')       || 'Avg Dept Size',     value: loading ? '—' : (departments?.length ? Math.round(totalHeadcount / departments.length) : 0), color: '#f59e0b' },
-          { label: t('admin.avgSalary')         || 'Avg Salary',        value: loading ? '—' : formatCurrency(avgSalaryAll), color: '#8b5cf6' },
+          { label: t('admin.avgSalary')         || 'Avg Salary',        value: loading ? '—' : formatSoum(avgSalaryAll), color: '#8b5cf6' },
         ].map((stat) => (
           <div key={stat.label} className="card-base p-4">
             <p className="text-xl font-bold" style={{ color: stat.color }}>{stat.value}</p>

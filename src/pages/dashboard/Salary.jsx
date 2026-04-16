@@ -3,6 +3,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, Cell, LabelList,
 } from 'recharts'
+import { formatSoum, formatSoumCompact, fmtSoumAxis } from '@/utils/formatters'
 import PageHeader from '@/components/shared/PageHeader'
 import ChartCard from '@/components/shared/ChartCard'
 import MetricSummaryRow from '@/components/shared/MetricSummaryRow'
@@ -20,7 +21,7 @@ const CustomTooltip = ({ active, payload, label }) => {
         <div key={p.name} className="flex items-center gap-2 text-slate-600 mb-1 last:mb-0">
           <span className="w-2 h-2 rounded-full shrink-0" style={{ background: p.color }} />
           <span>{p.name}:</span>
-          <span className="font-semibold text-slate-800">${p.value?.toLocaleString()}</span>
+          <span className="font-semibold text-slate-800">{formatSoum(p.value)}</span>
         </div>
       ))}
     </div>
@@ -58,10 +59,10 @@ export default function Salary() {
   const { summary, byDepartment, salaryBands } = data
 
   const summaryMetrics = [
-    { label: 'kpi.avgSalary',    value: `$${summary.average.toLocaleString()}`, unit: 'common.perMonth', color: 'emerald' },
-    { label: 'kpi.medianSalary', value: `$${summary.median.toLocaleString()}`,  unit: 'common.perMonth', color: 'indigo'  },
-    { label: 'kpi.headcount',    value: String(summary.headcount), unit: 'common.employees', color: 'cyan' },
-    { label: 'kpi.totalPayroll', value: `$${(summary.total_payroll / 1000).toFixed(0)}k`, unit: 'common.monthly', color: 'violet' },
+    { label: 'kpi.avgSalary',    value: formatSoumCompact(summary.average),      unit: 'common.perMonth', color: 'emerald' },
+    { label: 'kpi.medianSalary', value: formatSoumCompact(summary.median),        unit: 'common.perMonth', color: 'indigo'  },
+    { label: 'kpi.headcount',    value: String(summary.headcount),                unit: 'common.employees', color: 'cyan'   },
+    { label: 'kpi.totalPayroll', value: formatSoumCompact(summary.total_payroll), unit: 'common.monthly',  color: 'violet'  },
   ]
 
   // Map backend 'department' → 'dept' for chart dataKeys
@@ -85,7 +86,7 @@ export default function Salary() {
       {/* Main horizontal bar chart */}
       <ChartCard
         title={t('charts.salaryByDept')}
-        subtitle="Average monthly salary by department (USD)"
+        subtitle="O'rtacha oylik ish haqi bo'limlar kesimida (UZS)"
         action={t('dashboard.viewAll')}
       >
         <ResponsiveContainer width="100%" height={300}>
@@ -100,7 +101,7 @@ export default function Salary() {
               tick={{ fontSize: 11, fill: '#94a3b8' }}
               axisLine={false}
               tickLine={false}
-              tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`}
+              tickFormatter={fmtSoumAxis}
             />
             <YAxis
               type="category"
@@ -118,7 +119,7 @@ export default function Salary() {
               <LabelList
                 dataKey="avg"
                 position="right"
-                formatter={(v) => `$${(v / 1000).toFixed(1)}k`}
+                formatter={(v) => `${(v / 1_000_000).toFixed(1)} mln`}
                 style={{ fontSize: 10, fill: '#64748b', fontWeight: 600 }}
               />
             </Bar>
@@ -137,7 +138,7 @@ export default function Salary() {
                 tick={{ fontSize: 10, fill: '#94a3b8' }}
                 axisLine={false}
                 tickLine={false}
-                tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`}
+                tickFormatter={fmtSoumAxis}
               />
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="min" name="Min" fill="#e0e7ff" radius={[4, 4, 0, 0]} />

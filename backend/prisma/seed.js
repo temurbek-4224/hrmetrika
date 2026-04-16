@@ -65,7 +65,7 @@ const DEPT_CONFIG = [
   {
     name: 'Engineering',
     count: 40,
-    salaryRange: [3800, 9500],
+    salaryRange: [9_500_000, 13_000_000],
     titles: [
       'Software Engineer', 'Senior Software Engineer', 'Tech Lead',
       'Backend Engineer', 'Frontend Engineer', 'DevOps Engineer',
@@ -75,7 +75,7 @@ const DEPT_CONFIG = [
   {
     name: 'Sales',
     count: 28,
-    salaryRange: [2600, 6000],
+    salaryRange: [8_000_000, 11_000_000],
     titles: [
       'Sales Representative', 'Senior Sales Representative',
       'Account Executive', 'Sales Manager', 'Business Development Manager',
@@ -85,7 +85,7 @@ const DEPT_CONFIG = [
   {
     name: 'Operations',
     count: 22,
-    salaryRange: [2400, 5200],
+    salaryRange: [8_000_000, 10_500_000],
     titles: [
       'Operations Manager', 'Operations Analyst', 'Project Manager',
       'Process Improvement Specialist', 'Supply Chain Analyst',
@@ -95,7 +95,7 @@ const DEPT_CONFIG = [
   {
     name: 'Marketing',
     count: 16,
-    salaryRange: [2300, 5400],
+    salaryRange: [8_000_000, 11_000_000],
     titles: [
       'Marketing Manager', 'Content Specialist', 'SEO Specialist',
       'Digital Marketing Manager', 'Brand Manager',
@@ -105,7 +105,7 @@ const DEPT_CONFIG = [
   {
     name: 'Product',
     count: 14,
-    salaryRange: [3200, 7500],
+    salaryRange: [9_000_000, 13_000_000],
     titles: [
       'Product Manager', 'Senior Product Manager', 'Product Owner',
       'Business Analyst', 'Product Director', 'Associate Product Manager',
@@ -114,7 +114,7 @@ const DEPT_CONFIG = [
   {
     name: 'Design',
     count: 14,
-    salaryRange: [2600, 5800],
+    salaryRange: [8_500_000, 11_500_000],
     titles: [
       'UX Designer', 'UI Designer', 'Product Designer',
       'Graphic Designer', 'UX Researcher', 'Senior UX Designer',
@@ -124,7 +124,7 @@ const DEPT_CONFIG = [
   {
     name: 'Finance',
     count: 13,
-    salaryRange: [2800, 6200],
+    salaryRange: [9_000_000, 12_500_000],
     titles: [
       'Financial Analyst', 'Senior Financial Analyst', 'Finance Manager',
       'Accountant', 'Controller', 'FP&A Analyst', 'Treasury Analyst',
@@ -133,7 +133,7 @@ const DEPT_CONFIG = [
   {
     name: 'HR',
     count: 13,
-    salaryRange: [2200, 4800],
+    salaryRange: [8_000_000, 11_000_000],
     titles: [
       'HR Manager', 'HR Specialist', 'Recruiter', 'Senior Recruiter',
       'HR Business Partner', 'Compensation & Benefits Analyst',
