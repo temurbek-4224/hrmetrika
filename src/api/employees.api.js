@@ -75,7 +75,7 @@ export async function updateEmployee(id, body) {
 
 /**
  * DELETE /api/employees/:id
- * Soft-delete — sets status to TERMINATED in the backend.
+ * Hard-delete — permanently removes the employee and their absence records.
  * Returns 204 No Content.
  */
 export async function deleteEmployee(id) {

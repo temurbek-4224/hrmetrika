@@ -18,6 +18,11 @@ function errorHandler(err, req, res, _next) {
   if (err.code === 'P2025') {
     return res.status(404).json({ error: 'Record not found.' })
   }
+  if (err.code === 'P2003') {
+    return res.status(409).json({
+      error: 'Cannot delete — this record is still referenced by other data.',
+    })
+  }
 
   // JWT errors (should be caught in middleware, but kept as fallback)
   if (err.name === 'JsonWebTokenError') {

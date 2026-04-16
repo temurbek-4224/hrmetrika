@@ -65,12 +65,13 @@ async function update(id, data) {
   })
 }
 
-/** Soft-delete: set status to TERMINATED rather than deleting the row */
+/**
+ * Hard-delete: permanently removes the employee and all their linked records.
+ * Absences must be deleted first to satisfy the FK constraint.
+ */
 async function remove(id) {
-  return prisma.employee.update({
-    where: { id },
-    data:  { status: 'TERMINATED', termination_date: new Date() },
-  })
+  await prisma.absence.deleteMany({ where: { employee_id: id } })
+  return prisma.employee.delete({ where: { id } })
 }
 
 module.exports = { getAll, getById, create, update, remove }

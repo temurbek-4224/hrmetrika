@@ -275,7 +275,7 @@ export default function Employees() {
     setDeleting(id)
     try {
       await deleteEmployee(id)
-      showToast('Employee terminated')
+      showToast('Employee permanently deleted')
       setConfirmId(null)
       refetch()
     } catch (err) {
@@ -332,7 +332,7 @@ export default function Employees() {
         }
         return confirmId === id ? (
           <span className="flex items-center gap-1.5 text-xs">
-            <span className="text-slate-500">Terminate?</span>
+            <span className="text-slate-500 font-medium">Delete permanently?</span>
             <button
               onClick={() => handleDelete(id)}
               disabled={deleting === id}
@@ -351,17 +351,13 @@ export default function Employees() {
             >
               {t('common.edit')}
             </button>
-            {row.status !== 'terminated' && (
-              <>
-                <span className="text-slate-200">|</span>
-                <button
-                  onClick={() => setConfirmId(id)}
-                  className="text-xs text-red-400 hover:text-red-600 font-medium"
-                >
-                  {t('common.delete')}
-                </button>
-              </>
-            )}
+            <span className="text-slate-200">|</span>
+            <button
+              onClick={() => setConfirmId(id)}
+              className="text-xs text-red-400 hover:text-red-600 font-medium"
+            >
+              {t('common.delete')}
+            </button>
           </div>
         )
       },

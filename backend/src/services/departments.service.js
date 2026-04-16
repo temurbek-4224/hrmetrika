@@ -50,6 +50,21 @@ async function update(id, { name }) {
 }
 
 async function remove(id) {
+  // Count every employee linked to this department, regardless of status.
+  // Terminated employees still hold a FK reference and will block the delete.
+  const linked = await prisma.employee.count({ where: { department_id: id } })
+
+  if (linked > 0) {
+    const noun = linked === 1 ? 'employee' : 'employees'
+    const verb = linked === 1 ? 'is'       : 'are'
+    const err  = new Error(
+      `Cannot delete this department — ${linked} ${noun} ${verb} still linked ` +
+      `(including terminated records). Reassign or permanently delete them first.`
+    )
+    err.status = 409
+    throw err
+  }
+
   return prisma.department.delete({ where: { id } })
 }
 
