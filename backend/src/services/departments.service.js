@@ -50,21 +50,30 @@ async function update(id, { name }) {
 }
 
 async function remove(id) {
-  // Count every employee linked to this department, regardless of status.
-  // Terminated employees still hold a FK reference and will block the delete.
-  const linked = await prisma.employee.count({ where: { department_id: id } })
+  // ── 1. Block if any employees are still linked (any status) ────────────────
+  // Terminated employees still hold a FK reference and will block the delete
+  // just as much as active ones.
+  const linkedEmployees = await prisma.employee.count({
+    where: { department_id: id },
+  })
 
-  if (linked > 0) {
-    const noun = linked === 1 ? 'employee' : 'employees'
-    const verb = linked === 1 ? 'is'       : 'are'
+  if (linkedEmployees > 0) {
+    const noun = linkedEmployees === 1 ? 'employee' : 'employees'
     const err  = new Error(
-      `Cannot delete this department — ${linked} ${noun} ${verb} still linked ` +
+      `Cannot delete this department — ${linkedEmployees} ${noun} still linked ` +
       `(including terminated records). Reassign or permanently delete them first.`
     )
     err.status = 409
     throw err
   }
 
+  // ── 2. Cascade-delete recruitment records for this department ───────────────
+  // RecruitmentRecord.department_id has a non-nullable FK → Department.
+  // Recruitment records belong to the department and have no independent
+  // existence, so it is safe to remove them automatically.
+  await prisma.recruitmentRecord.deleteMany({ where: { department_id: id } })
+
+  // ── 3. Now the department has no FK children — safe to delete ──────────────
   return prisma.department.delete({ where: { id } })
 }
 
